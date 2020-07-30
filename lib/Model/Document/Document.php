@@ -546,6 +546,7 @@ abstract class Document implements \JsonSerializable
             'valuta_cambio' => null !== $this->exchangeRatio ? \sprintf('%.5f', $this->exchangeRatio->getConversionRatio()) : null,
             'prezzi_ivati' => $this->vatIncluded ?? null,
             'rit_acconto' => $this->withholdingTaxRatio,
+            'rivalsa' => DEFAULT_RIVALSA,
             'imponibile_ritenuta' => $this->withholdingTaxIncome,
             'rit_altra' => $this->withholdingOtherRatio,
             'marca_bollo' => null !== $this->stamp ? (float) $this->stamp->getAmount() : null,
